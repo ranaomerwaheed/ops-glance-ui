@@ -1,8 +1,7 @@
-
 import { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ChevronDown, GitHub, Linkedin, Mail, ExternalLink } from 'lucide-react';
+import { ChevronDown, Github, Linkedin, Mail, ExternalLink } from 'lucide-react';
 import ProjectCard from '@/components/ProjectCard';
 import SkillTag from '@/components/SkillTag';
 import { Button } from '@/components/ui/button';
@@ -229,7 +228,7 @@ const Portfolio = () => {
                 <span className="text-lg">hello@example.com</span>
               </a>
               <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-4 rounded-lg bg-black/20 hover:bg-black/30 transition-colors">
-                <GitHub className="w-8 h-8 text-primary" />
+                <Github className="w-8 h-8 text-primary" />
                 <span className="text-lg">github.com/myusername</span>
               </a>
               <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-4 rounded-lg bg-black/20 hover:bg-black/30 transition-colors">

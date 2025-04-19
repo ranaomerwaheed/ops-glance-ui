@@ -1,6 +1,5 @@
-
 import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft, GitHub, ExternalLink } from 'lucide-react';
+import { ArrowLeft, Github, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 // Sample project details data
@@ -139,7 +138,7 @@ const ProjectDetails = () => {
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 p-3 rounded-lg bg-black/50 hover:bg-primary/20 transition-colors"
                 >
-                  <GitHub className="h-5 w-5" />
+                  <Github className="h-5 w-5" />
                   <span>View Source Code</span>
                 </a>
                 <a 

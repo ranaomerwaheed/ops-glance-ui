@@ -83,9 +83,9 @@ const Portfolio = () => {
   };
 
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white min-h-screen">
+    <div className="bg-gradient-to-br from-white via-secondary/50 to-white min-h-screen">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-black/20 backdrop-blur-lg z-50">
+      <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-lg z-50 border-b border-primary/10 shadow-sm">
         <div className="container mx-auto px-6 py-4 flex justify-between items-center">
           <div className="font-bold text-xl">
             <span className="text-primary">Portfolio</span>
@@ -122,7 +122,7 @@ const Portfolio = () => {
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 w-full h-full">
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-slate-900"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white/50"></div>
         </div>
         <div className="container mx-auto px-6 z-10 text-center">
           <motion.div
@@ -131,10 +131,10 @@ const Portfolio = () => {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-5xl md:text-7xl font-bold mb-4">
-              <span className="text-white">Hi, I'm </span>
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">Alex</span>
+              <span className="text-foreground">Hi, I'm </span>
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-primary/80 to-primary/60">Alex</span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto mb-8">
+            <p className="text-xl md:text-2xl text-foreground/80 max-w-2xl mx-auto mb-8">
               A passionate full-stack developer specialized in creating modern web applications
             </p>
             <Button 
@@ -147,12 +147,12 @@ const Portfolio = () => {
           </motion.div>
         </div>
         <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <ChevronDown className="w-8 h-8 text-white/50" />
+          <ChevronDown className="w-8 h-8 text-foreground/50" />
         </div>
       </section>
 
       {/* About Section */}
-      <section ref={aboutRef} className="py-20 bg-black/20 backdrop-blur-md">
+      <section ref={aboutRef} className="py-20 bg-white/50 backdrop-blur-md">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
             <span className="border-b-2 border-primary pb-2">About Me</span>
@@ -168,17 +168,17 @@ const Portfolio = () => {
               </div>
             </div>
             <div className="md:w-2/3">
-              <p className="text-lg text-gray-300 mb-6">
+              <p className="text-lg text-foreground/80 mb-6">
                 I'm a full-stack developer with 5+ years of experience building modern web applications. 
                 My journey in software development started with a curiosity about how websites work, 
                 which evolved into a passion for creating elegant, user-focused solutions.
               </p>
-              <p className="text-lg text-gray-300 mb-6">
+              <p className="text-lg text-foreground/80 mb-6">
                 I specialize in JavaScript/TypeScript ecosystems, with expertise in React, Node.js, 
                 and various database technologies. I'm passionate about clean code, performance optimization, 
                 and creating seamless user experiences.
               </p>
-              <p className="text-lg text-gray-300">
+              <p className="text-lg text-foreground/80">
                 When I'm not coding, you can find me hiking, reading tech blogs, or experimenting 
                 with new technologies to stay at the cutting edge of web development.
               </p>
@@ -202,7 +202,7 @@ const Portfolio = () => {
       </section>
 
       {/* Skills Section */}
-      <section ref={skillsRef} className="py-20 bg-black/20 backdrop-blur-md">
+      <section ref={skillsRef} className="py-20 bg-white/50 backdrop-blur-md">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
             <span className="border-b-2 border-primary pb-2">Skills & Technologies</span>
@@ -223,15 +223,15 @@ const Portfolio = () => {
           </h2>
           <div className="max-w-md mx-auto">
             <div className="flex flex-col gap-8">
-              <a href="mailto:hello@example.com" className="flex items-center gap-4 p-4 rounded-lg bg-black/20 hover:bg-black/30 transition-colors">
+              <a href="mailto:hello@example.com" className="flex items-center gap-4 p-4 rounded-lg bg-primary/10 hover:bg-primary/20 transition-colors">
                 <Mail className="w-8 h-8 text-primary" />
                 <span className="text-lg">hello@example.com</span>
               </a>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-4 rounded-lg bg-black/20 hover:bg-black/30 transition-colors">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-4 rounded-lg bg-primary/10 hover:bg-primary/20 transition-colors">
                 <Github className="w-8 h-8 text-primary" />
                 <span className="text-lg">github.com/myusername</span>
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-4 rounded-lg bg-black/20 hover:bg-black/30 transition-colors">
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-4 rounded-lg bg-primary/10 hover:bg-primary/20 transition-colors">
                 <Linkedin className="w-8 h-8 text-primary" />
                 <span className="text-lg">linkedin.com/in/myusername</span>
               </a>
@@ -241,9 +241,9 @@ const Portfolio = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-6 bg-black/40 backdrop-blur-lg">
+      <footer className="py-6 bg-white/80 backdrop-blur-lg border-t border-primary/10">
         <div className="container mx-auto px-6 text-center">
-          <p className="text-gray-400">© {new Date().getFullYear()} My Portfolio. All rights reserved.</p>
+          <p className="text-foreground/60">© {new Date().getFullYear()} My Portfolio. All rights reserved.</p>
         </div>
       </footer>
     </div>

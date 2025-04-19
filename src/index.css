@@ -9,24 +9,24 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 45 40% 25%;
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 45 40% 25%;
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-    --primary: 243 75% 59%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 226 100% 82%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 271 91% 65%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --popover-foreground: 45 40% 25%;
+    --primary: 45 80% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 45 50% 90%;
+    --secondary-foreground: 45 40% 25%;
+    --muted: 45 20% 95%;
+    --muted-foreground: 45 20% 50%;
+    --accent: 45 80% 50%;
+    --accent-foreground: 0 0% 100%;
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 221.2 83.2% 53.3%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 45 30% 85%;
+    --input: 45 30% 85%;
+    --ring: 45 80% 50%;
     --radius: 0.75rem;
   }
 
@@ -56,7 +56,7 @@
 }
 
 .stats-card {
-  @apply relative overflow-hidden rounded-xl bg-white p-6 shadow-sm transition-shadow hover:shadow-md;
+  @apply relative overflow-hidden rounded-xl bg-white p-6 shadow-sm transition-shadow hover:shadow-md border border-primary/20;
 }
 
 .stats-card::before {
@@ -66,15 +66,15 @@
   left: 0;
   right: 0;
   height: 4px;
-  @apply bg-gradient-to-r from-primary to-accent;
+  @apply bg-gradient-to-r from-primary to-primary/50;
 }
 
 .nav-item {
-  @apply flex items-center gap-3 rounded-lg px-3 py-2 text-slate-500 transition-colors hover:bg-slate-100 hover:text-slate-900;
+  @apply flex items-center gap-3 rounded-lg px-3 py-2 text-foreground/75 transition-colors hover:bg-primary/10 hover:text-primary;
 }
 
 .nav-item.active {
-  @apply bg-slate-100 text-slate-900 font-medium;
+  @apply bg-primary/20 text-primary font-medium;
 }
 
 /* Smooth scrolling for the whole page */
@@ -93,10 +93,11 @@ html {
 
 /* Custom gradients */
 .text-gradient {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent;
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-primary/80 to-primary/60;
 }
 
 /* Custom card styling */
 .portfolio-card {
-  @apply bg-black/30 backdrop-blur-md rounded-xl overflow-hidden border border-white/10;
+  @apply bg-white/80 backdrop-blur-md rounded-xl overflow-hidden border border-primary/20 shadow-lg hover:shadow-primary/20 transition-all duration-300;
 }
+

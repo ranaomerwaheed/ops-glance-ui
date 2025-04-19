@@ -9,16 +9,16 @@ interface SkillTagProps {
 }
 
 const SkillTag = ({ skill }: SkillTagProps) => {
-  const getCategoryColor = (category: string) => {
+  const getCategoryColor = (category: 'frontend' | 'backend' | 'tools') => {
     switch (category) {
       case 'frontend':
-        return 'bg-accent/20 text-accent';
+        return 'bg-primary/10 text-primary border border-primary/20';
       case 'backend':
-        return 'bg-blue-500/20 text-blue-400';
+        return 'bg-accent/10 text-accent border border-accent/20';
       case 'tools':
-        return 'bg-green-500/20 text-green-400';
+        return 'bg-secondary/50 text-secondary-foreground border border-secondary/20';
       default:
-        return 'bg-primary/20 text-primary';
+        return 'bg-primary/10 text-primary border border-primary/20';
     }
   };
 

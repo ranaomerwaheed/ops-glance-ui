@@ -103,6 +103,12 @@ const Portfolio = () => {
             >
               Projects
             </button>
+            <Link
+              to="/weather"
+              className="hover:text-primary transition-colors"
+            >
+              Weather
+            </Link>
             <button
               onClick={() => scrollToSection(skillsRef)}
               className={`hover:text-primary transition-colors ${activeSection === 'skills' ? 'text-primary' : ''}`}

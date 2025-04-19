@@ -34,20 +34,20 @@ const projects = [
   }
 ];
 
-// Sample skills data
+// Sample skills data with type-safe categories
 const skills = [
-  { name: 'JavaScript', category: 'frontend' },
-  { name: 'TypeScript', category: 'frontend' },
-  { name: 'React', category: 'frontend' },
-  { name: 'Node.js', category: 'backend' },
-  { name: 'Express', category: 'backend' },
-  { name: 'MongoDB', category: 'backend' },
-  { name: 'PostgreSQL', category: 'backend' },
-  { name: 'Tailwind CSS', category: 'frontend' },
-  { name: 'Redux', category: 'frontend' },
-  { name: 'Git', category: 'tools' },
-  { name: 'Docker', category: 'tools' },
-  { name: 'AWS', category: 'tools' },
+  { name: 'JavaScript', category: 'frontend' as const },
+  { name: 'TypeScript', category: 'frontend' as const },
+  { name: 'React', category: 'frontend' as const },
+  { name: 'Node.js', category: 'backend' as const },
+  { name: 'Express', category: 'backend' as const },
+  { name: 'MongoDB', category: 'backend' as const },
+  { name: 'PostgreSQL', category: 'backend' as const },
+  { name: 'Tailwind CSS', category: 'frontend' as const },
+  { name: 'Redux', category: 'frontend' as const },
+  { name: 'Git', category: 'tools' as const },
+  { name: 'Docker', category: 'tools' as const },
+  { name: 'AWS', category: 'tools' as const },
 ];
 
 const Portfolio = () => {
